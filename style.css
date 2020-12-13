@@ -1,0 +1,677 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+}
+
+nav {
+    background: green;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    padding: 0 100px;
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    font-family:'Montserrat', sans-serif;
+    letter-spacing: -1px;
+}
+
+nav .nav-items {
+    display: flex;
+    flex: 1;
+    list-style: none;
+    padding: 0 0 0 40px;
+}
+
+nav .nav-items li {
+    padding: 0 15px;
+}
+
+nav .nav-items li a {
+    color: #fff;
+    font-size: 18px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500;
+    text-decoration: none;  
+}
+
+nav .nav-items li a:hover {
+    color: lime; 
+}
+
+nav form {
+    display: flex;
+    height: 40px;
+    border-radius: 2px;
+    padding: 2px;
+    background: green;
+    min-width: 18%!important;
+    border: 1px solid rgba(155,155,155,0.2);
+}
+
+nav form .search-data {
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+    color: #000;
+    font-weight: 500;
+    background: white;
+    border: none;
+    font-size: 17px;
+}
+
+nav form  button {
+    padding: 0 15px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    color: #000; 
+    border-radius: 2px;
+}
+
+.tch-logo {
+    position: absolute;
+    left: 7%;
+    top: 20%;
+    width: 450px;
+    height: 450px;
+}
+
+h1 {
+    position: absolute;
+    top: 85%;
+    left: 5%;
+    font-size: 48px;
+    font-family: gadget;  
+}
+
+.spayed img {
+    position: absolute;
+    right: 3%;
+    margin-top: 100px;
+    width: 350px;
+    height: 350px;
+    border: 5px solid #F0F8FF;
+}
+
+.doctor img {
+    position: absolute;
+    right: 30%;
+    margin-top: 100px;
+    width: 350px;
+    height: 350px;
+    border: 5px solid #F0F8FF;
+}
+
+.caption img {
+    position: absolute;
+    right: 13%;
+    top: 15%;
+    width: 450px;
+    height: 100px;
+}
+
+.title p {
+    position: absolute;
+    right: 25%;
+    font-family: georgia;
+    font-size: 25px;
+    top: 85%;
+}
+
+p {
+    position: absolute;
+    right: 2%;
+    font-size: 25px;
+    top: 96%;
+}
+
+h2 {
+    position: absolute;
+    left: 2%;
+    font-size: 50px;
+    top: 118%;
+    font-family: 'fantasy', papyrus;
+    color: #008080;
+    padding: 0;
+}
+
+.slider{
+  position: absolute;
+  top: 130%;
+  left: 1%;
+  width: 700px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 800px;
+  height: 500px;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #40D3DC;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+#radio5:checked ~ .first{
+  margin-left: -80%;
+}
+
+#radio6:checked ~ .first{
+  margin-left: -100%;
+}
+
+#radio7:checked ~ .first{
+  margin-left: -120%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #40D3DC;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #40D3DC;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #40D3DC;
+}
+               
+#radio5:checked ~ .navigation-auto .auto-btn5{
+  background: #40D3DC;
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn6{
+  background: #40D3DC;
+}
+
+#radio7:checked ~ .navigation-auto .auto-btn7{
+  background: #40D3DC;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'fantasy', papyrus;
+    color: #008080;
+    margin-top: 2%;
+    font-size: 40px
+}
+
+.res-boots img {
+    position: absolute;
+    width: 420px;
+    height: 250px;
+    left: 3%;
+    top: 30%;
+    border: 5px solid black;
+}
+
+.txt p {
+    position: absolute;
+	right: 3%;
+	top: 30%;
+	font-family: courier new;
+	border: 5px solid hotpink;
+	padding: 25px;
+	font-size: 15px;
+	background-color: none;
+}
+
+.icon-paw img {
+    position: absolute;
+    width: 40px;
+    left: 35%;
+    top: 28%;
+}
+
+.res-mara img {
+    position: absolute;
+    width: 420px;
+    height: 280px;
+    left: 3%;
+    top: 75%;
+    border: 5px solid black;
+}
+
+.txt1 p {
+    position: absolute;
+	right: 3%;
+	top: 75%;
+	font-family: courier new;
+	border: 5px solid hotpink;
+	padding: 25px;
+	font-size: 15px;
+	background-color: none;
+}
+
+.icon1-paw img {
+    position: absolute;
+    width: 40px;
+    left: 35%;
+    top: 73%;
+}
+
+.res-kaypee img {
+    position: absolute;
+    width: 420px;
+    height: 270px;
+    left: 3%;
+    top: 125%;
+    border: 5px solid black;
+}
+
+.txt2 p {
+    position: absolute;
+	right: 3%;
+	top: 125%;
+	font-family: courier new;
+	border: 5px solid hotpink;
+	padding: 19px;
+	font-size: 15px;
+	background-color: none;
+}
+
+.icon2-paw img {
+    position: absolute;
+    width: 40px;
+    left: 35%;
+    top: 123%;
+}
+
+.res-poco img {
+    position: absolute;
+    width: 420px;
+    height: 265px;
+    left: 3%;
+    top: 173%;
+    border: 5px solid black;
+}
+
+.txt3 p {
+    position: absolute;
+	right: 3%;
+	top: 173%;
+	font-family: courier new;
+	border: 5px solid hotpink;
+	padding: 25px;
+	font-size: 15px;
+	background-color: none;
+}
+
+.icon3-paw img {
+    position: absolute;
+    width: 40px;
+    left: 35%;
+    top: 171%;
+}
+
+.banner {
+    background-color: green;
+    margin-top: -5%;
+    width: 100%;
+    height: 151px;
+}
+
+.next {
+    text-align: center;
+    margin-top: 98%;
+    font-size: 18px;
+}
+
+.next a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border: 1px solid black;
+    background-color: #eee;
+}
+
+.next a:hover {
+    background: lime;
+    transition: .4s;
+    color: #000;
+}
+
+.icon-dog img {
+    position: absolute;
+    width: 15%;
+    top: 212%;
+    left: 36%
+}
+
+.res-phoebe img {
+    position: absolute;
+    width: 420px;
+    height: 278px;
+    left: 3%;
+    top: 30%;
+    border: 5px solid black;
+}
+
+.txt4 p {
+    position: absolute;
+	right: 3%;
+	top: 30%;
+	font-family: courier new;
+	border: 5px solid hotpink;
+	padding: 25px;
+	font-size: 15px;
+	background-color: none;
+}
+
+.icon4-paw img {
+    position: absolute;
+    width: 40px;
+    left: 36%;
+    top: 28%;
+}
+
+.res-tuna img {
+    position: absolute;
+    width: 420px;
+    height: 268px;
+    left: 3%;
+    top: 80%;
+    border: 5px solid black;
+}
+
+.txt5 p {
+    position: absolute;
+	right: 3%;
+	top: 80%;
+	font-family: courier new;
+	border: 5px solid hotpink;
+	padding: 27px;
+	font-size: 15px;
+	background-color: none;
+}
+
+.icon5-paw img {
+    position: absolute;
+    width: 40px;
+    left: 36%;
+    top: 78%;
+}
+
+.res-fil img {
+    position: absolute;
+    width: 420px;
+    height: 245px;
+    left: 3%;
+    top: 130%;
+    border: 5px solid black;
+}
+
+.txt6 p {
+    position: absolute;
+	right: 3%;
+	top: 130%;
+	font-family: courier new;
+	border: 5px solid hotpink;
+	padding: 24px;
+	font-size: 15px;
+	background-color: none;
+}
+
+.icon6-paw img {
+    position: absolute;
+    width: 40px;
+    left: 36%;
+    top: 128%;
+}
+
+.res-kevin img {
+    position: absolute;
+    width: 420px;
+    height: 254px;
+    left: 3%;
+    top: 175%;
+    border: 5px solid black;
+}
+
+.txt7 p {
+    position: absolute;
+	right: 3%;
+	top: 175%;
+	font-family: courier new;
+	border: 5px solid hotpink;
+	padding: 20px;
+	font-size: 15px;
+	background-color: none;
+}
+
+.icon7-paw img {
+    position: absolute;
+    width: 40px;
+    left: 36%;
+    top: 173%;
+}
+
+.previous {
+    text-align: center;
+    margin-top: 98%;
+    font-size: 18px;
+}
+
+.previous a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border: 1px solid black;
+    background-color: #eee;
+}
+
+.previous a:hover {
+    background: lime;
+    transition: .4s;
+    color: #000;
+}
+
+.icon-cat img {
+    position: absolute;
+    width: 10%;
+    top: 218%;
+    left: 37%
+}
+
+.abt-logo img {
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    height: 70%;
+}
+
+.abt-caption h1 {
+    position: absolute;
+    left: 10%;
+}
+
+.abtcaption {
+    position: absolute;
+    right: 17%;
+    top: 20%;
+}
+
+.ms p {
+    position: absolute;
+	right: 2%;
+	top: 29%;
+	padding: 20px;
+	font-size: 20px;
+	font-family: 'Monospace'lucida console;
+    background-color: honeydew;
+}
+
+.justify {
+	text-align: justify;
+}
+
+.icon8-paw img {
+    position: absolute;
+    width: 40px;
+    left: 60%;
+    top: 22%;
+}
+
+.icon9-paw img {
+    position: absolute;
+    width: 40px;
+    left: 83%;
+    top: 22%;
+}
+
+.adopt img {
+    position: absolute;
+    right: 9%;
+    top: 90%;
+    width: 40%;
+}
+
+.abt-dog img {
+    position: absolute;
+    width: 15%;
+    top: 89%;
+    right: 1%
+}
+
+.abt-cat img {
+    position: absolute;
+    height: 15%;
+    width: 8%;
+    top: 98%;
+    right: 46%
+}
+
+.contact img {
+    position: absolute;
+    height: 5%;
+    left: 2%;
+    top: 111%;
+}
+
+.contact-text p {
+    position: absolute;
+    left: 5%;
+    top: 112%;
+    font-size: 15px;
+}
+
+.email img {
+    position: absolute;
+    height: 5%;
+    left: 13%;
+    top: 111%;
+}
+
+.email-text p {
+    position: absolute;
+    left: 16%;
+    top: 112%;
+    font-size: 15px;
+}
+
+.fb img {
+    position: absolute;
+    height: 5%;
+    left: 28%;
+    top: 111%;
+}
+
+.fb-text p {
+    position: absolute;
+    left: 31%;
+    top: 112%;
+    font-size: 15px;
+}
